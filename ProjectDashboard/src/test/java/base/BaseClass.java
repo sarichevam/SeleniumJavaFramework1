@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -27,6 +28,10 @@ public class BaseClass {
 	
 	@BeforeTest
 	public void setUp() throws IOException {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		
+		
 		
 		if (driver==null) {
 			System.out.println("The path is: " + System.getProperty("user.dir"));
@@ -37,7 +42,7 @@ public class BaseClass {
 		}
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 			driver.get(prop.getProperty("testurl"));
 			
 			

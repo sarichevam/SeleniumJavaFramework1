@@ -6,12 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcase.roleAccess$PimsAdmin">
+      <class name="testcase.anotherWayToHandlePopUp$newOne">
         <methods>
-          <include name="setUp"/>
-          <include name="switchingPims"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- testcase.roleAccess$PimsAdmin -->
+      </class> <!-- testcase.anotherWayToHandlePopUp$newOne -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

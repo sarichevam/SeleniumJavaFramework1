@@ -1,5 +1,6 @@
 package testcase;
 
+import org.apache.commons.collections4.bag.SynchronizedSortedBag;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -94,6 +95,10 @@ public class roleAccess {
 			} else {
 			    System.out.println("The active item DOES NOT appear in the column");
 			}
+			
+			long startTime = System.currentTimeMillis();
+			long endtime = System.currentTimeMillis();
+			long duration = endtime - startTime;
 
 			
 			
